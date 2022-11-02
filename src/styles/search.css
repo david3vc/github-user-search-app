@@ -1,0 +1,11 @@
+.search-contenedor {
+  display: flex;
+}
+
+.input__sin-border {
+  border: 0;
+}
+
+.input__sin-border:focus {
+  outline: none;
+}
