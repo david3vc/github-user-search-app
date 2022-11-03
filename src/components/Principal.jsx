@@ -1,3 +1,4 @@
+import '../styles/principal.css'
 
 const Principal = ({ data }) => {
 
@@ -5,6 +6,7 @@ const Principal = ({ data }) => {
     <div className="principal-contenedor">
       <div className="principal-contenedor__header">
         <div className="foto-perfil">
+          <img src={data?.avatar_url} className="foto-perfil__img img-fluid" />
         </div>
         <div className="usuario">
           <div className="usuario__nombre">

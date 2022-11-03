@@ -1,0 +1,13 @@
+.principal-contenedor {
+  display: flex;
+  margin: 0px 5%;
+  flex-direction: column;
+}
+
+.foto-perfil {
+  width: 20%;
+}
+
+.foto-perfil__img {
+  border-radius: 50%;
+}

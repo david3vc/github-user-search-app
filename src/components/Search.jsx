@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { Button } from "react-bootstrap";
 import { useFormik } from "formik";
-import Form from "react-bootstrap/Form";
 import useGetUser from "./useGetUser";
 import "../styles/search.css";
 import iconoLupa from "../assets/icon-search.svg";
@@ -28,26 +27,24 @@ const Search = ({ setData }) => {
   };
 
   return (
-    <div className="search-contenedor">
+    <div className="search-contenedor d-flex justify-content-between">
       <div className="search-contenedor__lupa">
         <img src={iconoLupa} />
       </div>
-      <div className="search-contenedor__input">
-        <Form.Control
-          size="sm"
+      <div className="search-contenedor__input mt-1">
+        <input 
           type="text"
           name="search"
-          placeholder='Search GitHub username'
-          className='input__sin-border'
+          placeholder="Search GitHub username"
+          className="input__sin-border"
           value={formik.values.search}
           onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
         />
       </div>
       <div className="search-contenedor__boton">
         <Button
           variant="primary"
-          size="sm"
+          size="md"
           className="border-0"
           onClick={formik.handleSubmit}
         >
