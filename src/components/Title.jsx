@@ -19,12 +19,12 @@ const Title = () => {
         {
           tema === TEMA_LIGHT ? (
             <div className="tema__light" onClick={cambiarTema}>
-              Light
+              LIGHT
               <img src={iconoSol} />
             </div> 
           ) : (
             <div className="tema__dark" onClick={cambiarTema}>
-              Dark
+              DARK
               <img src={iconoLuna} />
             </div>
           )

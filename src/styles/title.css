@@ -3,4 +3,10 @@
   margin: 0px 5%;
   flex-direction: row;
   justify-content: space-between;
+  font-family: 'Space Mono', monospace;
+  font-weight: bold;
+}
+
+.title-contenedor__texto {
+  font-size: 26px;
 }
