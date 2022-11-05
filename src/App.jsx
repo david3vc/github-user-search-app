@@ -3,19 +3,34 @@ import {
 	QueryClientProvider,
 } from 'react-query';
 import { useState } from 'react';
+import { TEMA_LIGHT, TEMA_DARK } from './constants';
 import Title from './components/Title';
 import Search from './components/Search';
 import Principal from './components/Principal';
+import './styles/app.css'
 
 function App() {
   const [data, setData] = useState({});
+  const [tema, setTema] = useState(TEMA_DARK);
   const queryClient = new QueryClient();
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Title />
-      <Search setData={setData} />
-      <Principal data={data} />
+      {
+        tema === TEMA_DARK ? (
+          <div className='tema__light'>
+            <Title tema={tema} setTema={setTema} />
+            <Search setData={setData} />
+            <Principal data={data} />
+          </div>
+        ) : (
+          <div className='tema__dark'>
+            <Title tema={tema} setTema={setTema} />
+            <Search setData={setData} />
+            <Principal data={data} />
+          </div>
+        )
+      }
     </QueryClientProvider>
   )
 }

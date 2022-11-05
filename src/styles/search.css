@@ -1,8 +1,10 @@
 .search-contenedor {
   display: flex;
   margin: 20px 5%;
+  padding: 8px;
   border-radius: 15px;
-/*  background-color: gray;*/
+  background-color: #FFF;
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
 }
 
 .input__sin-border {
@@ -11,4 +13,8 @@
 
 .input__sin-border:focus {
   outline: none;
+}
+
+.search-contenedor__input-desktop {
+  display: none;
 }

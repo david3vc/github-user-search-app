@@ -1,4 +1,4 @@
-.title-contenedor {
+.title-contenedor-dark, .title-contenedor-light {
   display: flex;
   margin: 0px 5%;
   flex-direction: row;
@@ -7,6 +7,10 @@
   font-weight: bold;
 }
 
-.title-contenedor__texto {
+.title-contenedor-dark__texto, .title-contenedor-light__texto {
   font-size: 26px;
+}
+
+.title-contenedor-light {
+  color: #FFF;
 }
