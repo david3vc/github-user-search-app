@@ -1,10 +1,19 @@
-.principal-contenedor {
+.principal-contenedor-light, .principal-contenedor-dark {
   display: flex;
   margin: 0px 5%;
   flex-direction: column;
-  background-color: #FFF;
   border-radius: 15px;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+  font-family: 'Space Mono';
+}
+
+.principal-contenedor-light {
+  background-color: #FFF;
+}
+
+.principal-contenedor-dark {
+  background-color: #1E2A47;
+  color: #FFF;
 }
 
 .foto-perfil {
@@ -13,4 +22,20 @@
 
 .foto-perfil__img {
   border-radius: 50%;
+}
+
+.usuario__name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.usuario__username {
+  color: #0079FF;
+}
+
+.principal-contenedor__estadisticas-dark {
+  background-color: #141D2F;
+  margin: 0px 20px;
+  padding: 10px;
+  border-radius: 20px;
 }

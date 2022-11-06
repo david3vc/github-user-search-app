@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import { useFormik } from "formik";
+import { TEMA_DARK, TEMA_LIGHT } from "../constants";
 import useGetUser from "./useGetUser";
 import "../styles/search.css";
 import iconoLupa from "../assets/icon-search.svg";
 
-const Search = ({ setData }) => {
+const Search = ({ setData, tema }) => {
   const [ocultarEstado, setOcultarEstado] = useState(false);
   const formik = useFormik({
     initialValues: {
       search: "",
-      error: "No results"
+      error: "No results",
     },
     onSubmit: (values) => handleSave(values),
   });
@@ -20,7 +21,7 @@ const Search = ({ setData }) => {
   useEffect(() => {
     if (isSuccess === true) {
       console.log(data);
-      setData(data)
+      setData(data);
     }
   }, [isSuccess]);
 
@@ -30,58 +31,101 @@ const Search = ({ setData }) => {
 
   const ocultar = () => {
     setOcultarEstado(true);
-    formik.setFieldValue('search', '');
-  }
+    formik.setFieldValue("search", "");
+  };
 
-  useEffect(()=>{
-    if(isError === true){
+  useEffect(() => {
+    if (isError === true) {
       setOcultarEstado(false);
     }
-  },[isError]);
+  }, [isError]);
 
   return (
-    <div className="search-contenedor d-flex justify-content-between">
-      <div className="search-contenedor__lupa">
-        <img src={iconoLupa} />
-      </div>
-      <div className="search-contenedor__input movil mt-1">
-        {
-          isError === true && ocultarEstado === false ? <span onClick={ocultar}>{formik.values.error}</span> : (  
-            <input 
+    <>
+      {tema === TEMA_LIGHT ? (
+        <div className="search-contenedor-light d-flex justify-content-between">
+          <div className="search-contenedor__lupa">
+            <img src={iconoLupa} />
+          </div>
+          <div className="search-contenedor__input movil">
+            {isError === true && ocultarEstado === false ? (
+              <span onClick={ocultar} className='movil__error'>{formik.values.error}</span>
+            ) : (
+              <input
+                type="text"
+                name="search"
+                placeholder="Search GitHub username..."
+                className="input__sin-border"
+                value={formik.values.search}
+                onChange={formik.handleChange}
+              />
+            )}
+          </div>
+          <div className="search-contenedor__input-desktop">
+            <input
               type="text"
               name="search"
-              placeholder='Search GitHub username...'
+              placeholder="Search GitHub username"
               className="input__sin-border"
               value={formik.values.search}
               onChange={formik.handleChange}
             />
-          )
-        }
-      </div>
-      <div className="search-contenedor__input-desktop mt-1">
-        <input 
-          type="text"
-          name="search"
-          placeholder='Search GitHub username'
-          className="input__sin-border"
-          value={formik.values.search}
-          onChange={formik.handleChange}
-        />
-        {
-          isError === true && <span>{formik.values.error}</span>
-        }
-      </div> 
-      <div className="search-contenedor__boton">
-        <Button
-          variant="primary"
-          size="md"
-          className="border-0"
-          onClick={formik.handleSubmit}
-        >
-          Search
-        </Button>
-      </div>
-    </div>
+            {isError === true && <span>{formik.values.error}</span>}
+          </div>
+          <div className="search-contenedor__boton">
+            <Button
+              variant="primary"
+              size="lg"
+              className="border-0"
+              onClick={formik.handleSubmit}
+            >
+              Search
+            </Button>
+          </div>
+        </div>
+      ) : (
+        <div className="search-contenedor-dark d-flex justify-content-between">
+          <div className="search-contenedor__lupa">
+            <img src={iconoLupa} />
+          </div>
+          <div className="search-contenedor__input movil">
+            {isError === true && ocultarEstado === false ? (
+              <span onClick={ocultar} className='movil__error'>{formik.values.error}</span>
+            ) : (
+              <input
+                type="text"
+                name="search"
+                placeholder="Search GitHub username..."
+                className="input__sin-border"
+                value={formik.values.search}
+                onChange={formik.handleChange}
+              />
+            )}
+          </div>
+          <div className="search-contenedor__input-desktop">
+            <input
+              type="text"
+              name="search"
+              placeholder="Search GitHub username"
+              className="input__sin-border"
+              value={formik.values.search}
+              onChange={formik.handleChange}
+            />
+            {isError === true && <span>{formik.values.error}</span>}
+          </div>
+          <div className="search-contenedor__boton">
+            <Button
+              variant="primary"
+              size="lg"
+              className="border-0"
+              onClick={formik.handleSubmit}
+            >
+              Search
+            </Button>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

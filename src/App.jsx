@@ -20,14 +20,14 @@ function App() {
         tema === TEMA_DARK ? (
           <div className='tema__light'>
             <Title tema={tema} setTema={setTema} />
-            <Search setData={setData} />
-            <Principal data={data} />
+            <Search setData={setData} tema={tema} />
+            <Principal data={data} tema={tema} />
           </div>
         ) : (
           <div className='tema__dark'>
             <Title tema={tema} setTema={setTema} />
-            <Search setData={setData} />
-            <Principal data={data} />
+            <Search setData={setData} tema={tema} />
+            <Principal data={data} tema={tema} />
           </div>
         )
       }

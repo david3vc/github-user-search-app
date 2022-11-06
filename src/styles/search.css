@@ -1,20 +1,40 @@
-.search-contenedor {
+.search-contenedor-dark, .search-contenedor-light {
   display: flex;
+  align-items: center;
   margin: 20px 5%;
   padding: 8px;
   border-radius: 15px;
   background-color: #FFF;
   box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+  font-family: 'Space Mono';
+  font-size: 12px;
+}
+
+.search-contenedor-light, .search-contenedor-light .input__sin-border, .search-contenedor-light .input__sin-border::placeholder {
+  background-color: #1E2A47;
+  color: white;
 }
 
 .input__sin-border {
   border: 0;
+  width: 125%;
+  position: relative;
+  left: -15px;
 }
 
 .input__sin-border:focus {
   outline: none;
 }
 
+.search-contenedor__boton Button {
+  font-size: 15px;
+}
+
 .search-contenedor__input-desktop {
   display: none;
+}
+
+.movil__error {
+  color: #F54D4D;
+  font-weight: bold;
 }
