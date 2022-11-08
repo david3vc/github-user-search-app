@@ -46,59 +46,59 @@ const Principal = ({ data, tema }) => {
             {data?.bio !== null ? (
               <span>{data?.bio}</span>
             ) : (
-              <span>{NOT_AVAILABLE}</span>
+              <span className="not-available">{NOT_AVAILABLE}</span>
             )}
           </div>
-          <div className="principal-contenedor__estadisticas">
+          <div className="principal-contenedor__estadisticas-light">
             <Row>
-              <Col>
-                <p>Repos</p>
-                <p>{data?.public_repos}</p>
+              <Col className="estadisticas__celda">
+                <p className="estadisticas__texto">Repos</p>
+                <p className="estadisticas__numero">{data?.public_repos}</p>
               </Col>
-              <Col>
-                <p>Followers</p>
-                <p>{data?.followers}</p>
+              <Col className="estadisticas__celda" >
+                <p className="estadisticas__texto">Followers</p>
+                <p className="estadisticas__numero">{data?.followers}</p>
               </Col>
-              <Col>
-                <p>Following</p>
-                <p>{data?.following}</p>
+              <Col className="estadisticas__celda">
+                <p className="estadisticas__texto">Following</p>
+                <p className="estadisticas__numero">{data?.following}</p>
               </Col>
             </Row>
           </div>
           <div className="principal-contenedor__info-personal">
             <Row>
-              <Col xs={12}>
-                <img src={iconLocation} />
+              <Col xs={12} className="info-personal__item">
+                <img src={iconLocation} />&nbsp;
                 {data?.location !== null ? (
-                  <span>{data?.location}</span>
+                  <span className="info-personal__data">{data?.location}</span>
                 ) : (
-                  <span>{NOT_AVAILABLE}</span>
+                  <span className="not-available">{NOT_AVAILABLE}</span>
                 )}
               </Col>
-              <Col xs={12}>
-                <img src={iconWebsite} />
+              <Col xs={12} className="info-personal__item">
+                <img src={iconWebsite} />&nbsp;
                 {data?.html_url !== null ? (
-                  <span>{data?.html_url}</span>
+                  <span className="info-personal__data">{data?.html_url}</span>
                 ) : (
-                  <span>{NOT_AVAILABLE}</span>
+                  <span className="not-available">{NOT_AVAILABLE}</span>
                 )}
               </Col>
             </Row>
             <Row>
-              <Col xs={12}>
-                <img src={iconTwitter} />
+              <Col xs={12} className="info-personal__item">
+                <img src={iconTwitter} />&nbsp;
                 {data?.twitter_username !== null ? (
-                  <span>{data?.twitter_username}</span>
+                  <span className="info-personal__data">{data?.twitter_username}</span>
                 ) : (
-                  <span>{NOT_AVAILABLE}</span>
+                  <span className="not-available">{NOT_AVAILABLE}</span>
                 )}
               </Col>
-              <Col xs={12}>
-                <img src={iconCompany} />
+              <Col xs={12} className="info-personal__item">
+                <img src={iconCompany} />&nbsp;
                 {data?.company !== null ? (
-                  <span>{data?.company}</span>
+                  <span className="info-personal__data">{data?.company}</span>
                 ) : (
-                  <span>{NOT_AVAILABLE}</span>
+                  <span className="not-available">{NOT_AVAILABLE}</span>
                 )}
               </Col>
             </Row>
@@ -129,59 +129,59 @@ const Principal = ({ data, tema }) => {
             {data?.bio !== null ? (
               <span>{data?.bio}</span>
             ) : (
-              <span>{NOT_AVAILABLE}</span>
+              <span className="not-available">{NOT_AVAILABLE}</span>
             )}
           </div>
           <div className="principal-contenedor__estadisticas-dark">
-            <Row className='' >
-              <Col>
-                <p>Repos</p>
-                <p>{data?.public_repos}</p>
+            <Row className='estadisticas__fila' >
+              <Col className="estadisticas__celda">
+                <p className="estadisticas__texto">Repos</p>
+                <p className="estadisticas__numero">{data?.public_repos}</p>
               </Col>
-              <Col>
-                <p>Followers</p>
-                <p>{data?.followers}</p>
+              <Col className="estadisticas__celda" >
+                <p className="estadisticas__texto">Followers</p>
+                <p className="estadisticas__numero">{data?.followers}</p>
               </Col>
-              <Col>
-                <p>Following</p>
-                <p>{data?.following}</p>
+              <Col className="estadisticas__celda">
+                <p className="estadisticas__texto">Following</p>
+                <p className="estadisticas__numero">{data?.following}</p>
               </Col>
             </Row>
           </div>
           <div className="principal-contenedor__info-personal dark">
             <Row>
-              <Col xs={12}>
-                <img src={iconLocation} />
+              <Col xs={12} className="info-personal__item">
+                <img src={iconLocation} />&nbsp;
                 {data?.location !== null ? (
-                  <span>{data?.location}</span>
+                  <span className="info-personal__data">{data?.location}</span>
                 ) : (
-                  <span>{NOT_AVAILABLE}</span>
+                  <span className="not-available">{NOT_AVAILABLE}</span>
                 )}
               </Col>
-              <Col xs={12}>
-                <img src={iconWebsite} />
+              <Col xs={12} className="info-personal__item">
+                <img src={iconWebsite} />&nbsp;
                 {data?.html_url !== null ? (
-                  <span>{data?.html_url}</span>
+                  <span className="info-personal__data">{data?.html_url}</span>
                 ) : (
-                  <span>{NOT_AVAILABLE}</span>
+                  <span className="not-available">{NOT_AVAILABLE}</span>
                 )}
               </Col>
             </Row>
             <Row>
-              <Col xs={12}>
-                <img src={iconTwitter} />
+              <Col xs={12} className="info-personal__item">
+                <img src={iconTwitter} />&nbsp;
                 {data?.twitter_username !== null ? (
-                  <span>{data?.twitter_username}</span>
+                  <span className="info-personal__data">{data?.twitter_username}</span>
                 ) : (
-                  <span>{NOT_AVAILABLE}</span>
+                  <span className="not-available">{NOT_AVAILABLE}</span>
                 )}
               </Col>
-              <Col xs={12}>
-                <img src={iconCompany} />
+              <Col xs={12} className="info-personal__item">
+                <img src={iconCompany} />&nbsp;
                 {data?.company !== null ? (
-                  <span>{data?.company}</span>
+                  <span className="info-personal__data">{data?.company}</span>
                 ) : (
-                  <span>{NOT_AVAILABLE}</span>
+                  <span className="not-available">{NOT_AVAILABLE}</span>
                 )}
               </Col>
             </Row>

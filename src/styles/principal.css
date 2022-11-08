@@ -16,8 +16,12 @@
   color: #FFF;
 }
 
+.principal-contenedor__header {
+  margin: 20px 20px 10px 20px;
+}
+
 .foto-perfil {
-  width: 85%;
+  width: 100%;
 }
 
 .foto-perfil__img {
@@ -31,11 +35,64 @@
 
 .usuario__username {
   color: #0079FF;
+  font-size: 15px;
+  margin: 5px 0px 0px 0px;
+}
+
+.usuario__fecha {
+  font-size: 14px;
+  margin: 10px 0px 0px 0px;
+}
+
+.principal-contenedor__descripcion {
+  margin: 10px 20px;
 }
 
 .principal-contenedor__estadisticas-dark {
   background-color: #141D2F;
   margin: 0px 20px;
   padding: 10px;
-  border-radius: 20px;
+  border-radius: 10px;
+}
+
+.principal-contenedor__estadisticas-light {
+  background-color: #F6F8FF;
+  margin: 0px 20px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
+.estadisticas__texto {
+  font-size: 12px;
+  margin: 3px 0px;
+}
+
+.estadisticas__numero {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 3px 0px;
+}
+
+.estadisticas__celda {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.principal-contenedor__info-personal {
+  margin: 20px;
+}
+
+.not-available {
+  color: #697C9A;
+  font-size: 14px;
+}
+
+.info-personal__item {
+  margin: 10px 0px;
+}
+
+.info-personal__data {
+  font-size: 13px;
 }
