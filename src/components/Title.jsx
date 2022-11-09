@@ -1,12 +1,9 @@
-import { useState } from "react"
 import { TEMA_LIGHT, TEMA_DARK } from "../constants";
 import '../styles/title.css'
 import iconoSol from '../assets/icon-sun.svg'
 import iconoLuna from '../assets/icon-moon.svg'
 
 const Title = ({ tema, setTema }) => {
-//  const [tema, setTema] = useState(TEMA_LIGHT);
-
   const cambiarTema = () => {
     const temaElegido = tema === TEMA_LIGHT ? TEMA_DARK : TEMA_LIGHT;
     setTema(temaElegido);

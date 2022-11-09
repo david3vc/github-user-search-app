@@ -38,3 +38,16 @@
   color: #F54D4D;
   font-weight: bold;
 }
+
+@media screen and (min-width: 576px){
+  .search-contenedor-light, .search-contenedor-dark {
+    margin: 20px 15%;
+  }
+}
+
+
+@media screen and (min-width: 768px){
+  .search-contenedor-light, .search-contenedor-dark {
+    margin: 20px 20%;
+  }
+}

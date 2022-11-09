@@ -65,7 +65,7 @@ const Principal = ({ data, tema }) => {
               </Col>
             </Row>
           </div>
-          <div className="principal-contenedor__info-personal">
+          <div className="principal-contenedor__info-personal d-flex">
             <Row>
               <Col xs={12} className="info-personal__item">
                 <img src={iconLocation} />&nbsp;
