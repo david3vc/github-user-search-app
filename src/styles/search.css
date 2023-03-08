@@ -48,6 +48,36 @@
 
 @media screen and (min-width: 768px){
   .search-contenedor-light, .search-contenedor-dark {
-    margin: 20px 20%;
+    margin: 20px 15%;
+  }
+
+  .search-contenedor__input-desktop {
+    display: block;
+    width: 300px;
+    position: relative;
+    right: 40px;
+    font-size: 15px;
+  }
+
+  .search-contenedor__input-movil, .movil__error {
+    display: none;
+  }
+
+  .search-contenedor__input-desktop{
+    display: flex;
+    justify-content: space-between;
+    width: 55%;
+  }
+
+  .desktop__error{
+    color: #F54D4D;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (min-width: 992px){
+  .search-contenedor-light, .search-contenedor-dark {
+    margin: 20px 22%;
   }
 }

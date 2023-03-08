@@ -21,7 +21,7 @@
 }
 
 .foto-perfil {
-  width: 100%;
+  width: 85%;
 }
 
 .foto-perfil__img {
@@ -42,6 +42,10 @@
 .usuario__fecha {
   font-size: 14px;
   margin: 10px 0px 0px 0px;
+}
+
+.usuario__descripcion {
+  display: none;
 }
 
 .principal-contenedor__descripcion {
@@ -99,13 +103,44 @@
 
 @media screen and (min-width: 576px){
   .principal-contenedor-light, .principal-contenedor-dark {
-    margin: 0px 10%;
+    margin: 0px 15%;
   }
 }
 
 
 @media screen and (min-width: 768px){
   .principal-contenedor-light, .principal-contenedor-dark {
-    margin: 0px 20%;
+    margin: 0px 15%;
+  }
+  
+  .info-personal__item .not-available {
+    font-size: 10px;
+  }
+
+  .info-personal__item .info-personal__data {
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 992px){
+  .principal-contenedor-light, .principal-contenedor-dark {
+    margin: 0px 22%;
+  }
+
+  .principal-contenedor__descripcion{
+    display: none;
+  }
+
+  .principal-contenedor__estadisticas-light, .principal-contenedor__estadisticas-dark, .principal-contenedor__info-personal{
+    margin: 10px 0px 0px 35%;
+  }
+
+  .principal-contenedor__estadisticas-light, .principal-contenedor__estadisticas-dark{
+    width: 60%;
+  }
+
+  .usuario__descripcion {
+    display: block;
+    margin-top: 10px;
   }
 }

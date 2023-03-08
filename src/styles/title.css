@@ -13,6 +13,10 @@
   font-size: 26px;
 }
 
+.title-contenedor-dark__tema, .title-contenedor-light__tema{
+  cursor: pointer;
+}
+
 .title-contenedor-light {
   color: #FFF;
 }
@@ -26,6 +30,12 @@
 
 @media screen and (min-width: 768px){
   .title-contenedor-light, .title-contenedor-dark {
-    margin: 0px 20%;
+    margin: 0px 15%;
+  }
+}
+
+@media screen and (min-width: 992px){
+  .title-contenedor-light, .title-contenedor-dark {
+    margin: 0px 22%;
   }
 }

@@ -8,6 +8,7 @@ import Title from './components/Title';
 import Search from './components/Search';
 import Principal from './components/Principal';
 import './styles/app.css'
+import Footer from './components/Footer';
 
 function App() {
   const [data, setData] = useState({});
@@ -22,12 +23,14 @@ function App() {
             <Title tema={tema} setTema={setTema} />
             <Search setData={setData} tema={tema} />
             <Principal data={data} tema={tema} />
+            <Footer tema={tema} />
           </div>
         ) : (
           <div className='tema__dark'>
             <Title tema={tema} setTema={setTema} />
             <Search setData={setData} tema={tema} />
             <Principal data={data} tema={tema} />
+            <Footer tema={tema} />
           </div>
         )
       }
